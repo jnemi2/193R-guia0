@@ -1,2 +1,2 @@
-# 193R-guia0
-(193R) Estructuras de Datos y Algoritmos - Guia 0
+# base-project
+We'll be using this project as a base project for all the rest

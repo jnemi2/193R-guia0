@@ -3,4 +3,4 @@ project(base_project C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(base_project main.c stringUtilities.c stringUtilities.h)
+add_executable(base_project main.c override.c override.h stringUtilities.c stringUtilities.h)

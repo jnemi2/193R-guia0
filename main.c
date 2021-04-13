@@ -1,13 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "stringUtilities.h"
+#include "override.h"
+
 
 int main() {
-    char text[] = "Hello, World!";
-    char * reversedText = reverse(&text[0]);
-    printf("Original: '%s' --> Reversed: '%s'\n", text, reversedText);
+    printf("Hello, World!\n");
 
-    free(reversedText);
+    int memory[MEMORY] = {0};
+    memory[MEMORY - 1] = -1;
+
+    overrideMalloc(2, memory);
+    overrideMalloc(3, memory);
+
+    for (int i = 0; i < MEMORY; i++)
+        printf("%d: %d\n", i, memory[i]);
 
     return 0;
 }
